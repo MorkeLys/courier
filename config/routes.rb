@@ -1,4 +1,7 @@
 Courier::Application.routes.draw do
+  get "users/new"
+    match '/signup',  :to => 'users#new'
+
     #get "pages/home"
     root :to => 'pages#home'
 
