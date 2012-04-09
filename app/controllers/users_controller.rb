@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     before_filter :authenticate, :only => [:edit, :update]
     before_filter :correct_user, :only => [:edit, :update]
-    before_filter :admin_user,   :only => :destroy
+    before_filter :admin_user,   :only => [:destroy, :new, :create]
     def index
         @title = "All users"
         @users = User.paginate(:page => params[:page])
@@ -17,9 +17,9 @@ class UsersController < ApplicationController
     def create
         @user = User.new(params[:user])
         if @user.save
-            sign_in @user
-            flash[:success] = "Welcome to the Courier Tracking App!"
-            redirect_to @user
+            # sign_in @user
+            #  flash[:success] = "Welcome to the Courier Tracking App!"
+            redirect_to users_path
             else
             @title = "Sign up"
             render 'new'
