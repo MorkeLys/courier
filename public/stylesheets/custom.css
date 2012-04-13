@@ -12,14 +12,14 @@ header {
 
 header img {
   padding: 1em;
-  background: #ff0000;
+  background: #cccccc;
 }
 
 section {
   margin-top: 1em;
   font-size: 120%;
   padding: 20px;
-  background: #ff0000;
+  background: #cccccc;
 }
 
 section h1 {
@@ -46,7 +46,7 @@ nav {
 }
 
 nav {
- background-color: red;
+ background-color: white;
   padding: 0 0.7em;
   white-space: nowrap;
 }
